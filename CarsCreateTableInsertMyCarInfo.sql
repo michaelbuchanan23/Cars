@@ -5,8 +5,8 @@ create table Car
 	Id int not null identity(1,1) primary key,
 	Make nvarchar(50) not null,
 	Model nvarchar(25) not null,
-	Trim nvarchar(10),
-	Year integer not null,
+	TrimPak nvarchar(10),
+	ModelYear integer not null,
 	IsSedan bit not null default 0,
 	PurchasePrice decimal(10,2) not null,
 );
@@ -14,28 +14,28 @@ create table Car
 go
 
 insert into Car
-	(Make, Model, Trim, Year, IsSedan, PurchasePrice)
+	(Make, Model, TrimPak, ModelYear, IsSedan, PurchasePrice)
 values
 	('Toyota', 'Camry', 'LE', '1992', 1, 0);
 
 insert into Car
-	(Make, Model, Trim, Year, IsSedan, PurchasePrice)
+	(Make, Model, TrimPak, ModelYear, IsSedan, PurchasePrice)
 values
 ('Toyota', 'Camry', 'LE', '1994', 1, 2200);
 
 insert into Car
-	(Make, Model, Trim, Year, IsSedan, PurchasePrice)
+	(Make, Model, TrimPak, ModelYear, IsSedan, PurchasePrice)
 values
 	('Toyota', 'Avalon', 'XLE', '2000', 1, 3000);
 
 insert into Car
-	(Make, Model, Trim, Year, IsSedan, PurchasePrice)
+	(Make, Model, TrimPak, ModelYear, IsSedan, PurchasePrice)
 values
 	('Mazda', '3000', 'X', '2004', 0, 2500);
 
 insert into Car
-	(Make, Model, Trim, Year, IsSedan, PurchasePrice)
+	(Make, Model, TrimPak, ModelYear, IsSedan, PurchasePrice)
 values
 	('Subaru', 'Outback', '2.51i', '2014', 1, 15000);
 
-select * from Car;
+select * from Car order;
